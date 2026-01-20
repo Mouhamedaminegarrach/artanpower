@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { BASE_PATH } from "@/lib/constants";
 
 export default function Footer() {
   const scrollToSection = (id: string) => {
@@ -18,7 +19,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/logo.png" 
+                src={`${BASE_PATH}/logo.png`}
                 alt="Arctan Power Logo" 
                 className="h-20 w-auto"
               />

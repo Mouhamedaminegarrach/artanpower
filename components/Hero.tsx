@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import MobileMenu from "./MobileMenu";
+import { BASE_PATH } from "@/lib/constants";
 
 export default function Hero() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,7 +40,7 @@ export default function Hero() {
             {/* Logo */}
             <Link href="#hero" className="flex items-center space-x-3">
               <img 
-                src="/logo.png" 
+                src={`${BASE_PATH}/logo.png`}
                 alt="Arctan Power Logo" 
                 className="h-20 w-auto"
               />
